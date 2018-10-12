@@ -251,18 +251,28 @@ private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) 
 {
-
+	n1 = Convert::ToInt32(textBox1->Text);
+	n2 = Convert::ToInt32(textBox2->Text);
+	resultado = n1-n2;
+	label3->Text = resultado.ToString();
 
 }
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) 
 {
-
+	n1 = Convert::ToInt32(textBox1->Text);
+	n2 = Convert::ToInt32(textBox2->Text);
+	resultado = n1*n2;
+	label3->Text = resultado.ToString();
 
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) 
 {
-
-
+	double total;
+	n1 = Convert::ToInt32(textBox1->Text);
+	n2 = Convert::ToInt32(textBox2->Text);
+	total = n1 / (n2*1.0);
+	
+	label3->Text = total.ToString();
 }
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) 
 {
