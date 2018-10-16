@@ -65,6 +65,7 @@ namespace Project20 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -188,6 +189,7 @@ namespace Project20 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(457, 440);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->pictureBox1);
@@ -201,7 +203,8 @@ namespace Project20 {
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Calculadora";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -277,12 +280,15 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) 
 {
 	//this.PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage
-	pictureBox1->Load("chorizo.jpg");
+	pictureBox1->Load("yo.jpg");
 	pictureBox1->SizeMode= PictureBoxSizeMode::StretchImage;
 }
 private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) 
 {
-	
+
+}
+private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+
 }
 };
 }
