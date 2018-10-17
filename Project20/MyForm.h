@@ -171,6 +171,7 @@ namespace Project20 {
 			this->pictureBox1->Location = System::Drawing::Point(64, 209);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(173, 161);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 9;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &MyForm::pictureBox1_Click);
@@ -281,7 +282,8 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 {
 	//this.PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage
 	pictureBox1->Load("yo.jpg");
-	pictureBox1->SizeMode= PictureBoxSizeMode::StretchImage;
+	//pictureBox1->SizeMode= PictureBoxSizeMode::StretchImage;
+
 }
 private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) 
 {
